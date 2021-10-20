@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<canvas id="myCanvas" width="400" height="400" style="border:1px solid #aaeeff;"></canvas>
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid #c3c3c3;"></canvas>
 <script type="text/javascript">
 var c=document.getElementById("myCanvas");
 var time = 120 ; //蛇的速度
 var cxt=c.getContext("2d");
 var x = y = 8;
 var a = 0; //食物坐标
-var t = ; //舍身长
+var t = 20; //舍身长
 var map = []; //记录蛇运行路径
 var size = 8; //蛇身单元大小
 var direction = 2; // 1 向上 2 向右 0 左 3下
