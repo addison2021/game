@@ -4,14 +4,45 @@
 <meta charset="UTF-8">
 <title>自我介紹</title>
 </head>
-吳信穎,11004123
-<body>
-my email:
-<a href="addison910706@yahoo.com.tw">addison910706@yahoo.com.tw</a><br>
-my phone:
-<a href="tel:0988221442">0988221442</a>
+<body style="background-color:lightsteelblue;">
+<h1><b>自我介紹</b></h1>
+<p1>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+</p1>
+<p>
+<table border="1">
+<tr>
+<td>姓名</td>
+<td>吳信穎</td>
+<td>照片</td>
+<td><a> 
+<img src="S__35487746.jpg"width="98" height="116"/>
+</a></td>
+</tr>
+<tr>
+<td>畢業高中職</td>
+<td colspan="3">國立高山高中</td>
+</tr>
+<tr>
+<td>專業能力</td>
+<td colspan="3">數學／邏輯推演</td>
+</tr>
+<tr>
+<td>獎項</td>
+<td colspan="3">參加AMC10獲得優等成績</td>
+</tr>
+<tr>
+<th colspan="4">聯絡方式如下</th>
+</tr>
+<tr>
+<td>信箱</td>
+<td colspan="3"><a href="addison910706@yahoo.com.tw">addison910706@yahoo.com.tw</a></td>
+</tr>
+<tr>
+<td>手機</td>
+<td colspan="3"><a href="tel:0988221442">0988221442</a></td>
+</tr>
+</table>
+</p>
 </body>
 </html>
