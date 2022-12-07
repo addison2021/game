@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+	<title>temp</title>
+	<meta charset="utf-8" />
+	<script>
+		function check1(){
+			var degc1 = document.getElementById('degc1').value * 1.8 + 32;
+			var degf1 = document.getElementById('degf1').value;
+			myform.degf1.value = degc1;
+		}
+		function check2(){
+			var degc2 = document.getElementById('degc2');
+			var degf2 = document.getElementById('degf2');
+			degc2.value=parseFloat(degf2.value -32) / 1.8;
+		}
+	</script>
+</head>
+<body>
+<form id='myform'>
+	<p>攝氏轉華氏溫度</p>
+	<input type='text' id='degc1' value='40' size="5" />°C = 
+	<input type='button' value='按我看答案' onclick='check1()'>
+	<input type='text' id='degf1' readonly='readonly' size="5"  />°F 
+
+	<p>華氏轉攝氏溫度</p>
+	<input type='text' id='degf2' value='40'  size="5" />°F = 
+	<input type='button' value='按我看答案' onclick='check2()'>
+	<input type='text' id='degc2' readonly='readonly'  size="5" />°C 
+</form>
+</body>
+</html>
