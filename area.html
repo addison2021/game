@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>za-warudo</title>
+	<meta charset="utf-8" />
+	<script>
+		function myselect(){
+			var myform = document.getElementById('myform');
+			var myselect = myform.sel.value;
+			var inp = document.getElementById('inp');
+			
+			if( myselect == 1 ){
+				inp.innerHTML = "半徑: <input type='text' name='num1'/>";
+			} else if( myselect == 2){
+				inp.innerHTML = "底: <input type='text' name='num1'/><br/>高: <input type='text' name='num2'/>";
+			} else{
+				inp.innerHTML = "長: <input type='text' name='num1'/><br/>寬: <input type='text' name='num2'/>";
+			}
+		}
+		function mycal(){
+			var myform = document.getElementById('myform');
+			var myselect = myform.sel.value;
+			myform.ans.value="";
+			if( myselect == 1 ){
+				var r = myform.num1.value;
+				myform.ans.value = 3.14*r*r;
+			} else if( myselect == 2){
+				myform.ans.value = myform.num1.value*myform.num2.value/2;
+			} else{
+				myform.ans.value = (myform.num1.value*myform.num2.value);
+			}
+		}
+	</script>
+</head>
+<style>
+</style>
+<body>
+<form id='myform'>
+	請選擇形狀：
+		<label><input type="radio" name="sel" value="1" onclick='myselect()'>圓形</label>
+		<label><input type="radio" name="sel" value="2" onclick='myselect()'>三角形</label>
+		<label><input type="radio" name="sel" value="3" onclick='myselect()'> 矩形 <br/></label>
+	<div id='inp'></div>
+	<input type="button" name="sub" value="計算" onclick="mycal()">
+	面積是：
+		<input type="text" name="ans" size="40" />
+</form>
+</body>
+</html>
