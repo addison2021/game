@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>foijiofjoijdsiohjdiohj</title>
+	<meta charset="utf-8" />
+	<script>
+		function pcgo(){
+			var pcform = document.getElementById('pcform');
+			var myform = document.getElementById('myform');
+			pcform.pc1.value = Math.floor(Math.random()*6)+1;
+			pcform.pc2.value = Math.floor(Math.random()*6)+1;
+			pcform.pc3.value = Math.floor(Math.random()*6)+1;
+			myform.my1.value = "";
+			myform.my2.value = "";
+			myform.my3.value = "";
+			ans.innerHTML = "";
+		}
+		function mygo(){
+			var myform = document.getElementById('myform');
+			myform.my1.value = Math.floor(Math.random()*6)+1;
+			myform.my2.value = Math.floor(Math.random()*6)+1;
+			myform.my3.value = Math.floor(Math.random()*6)+1;
+			var pcform = document.getElementById('pcform');
+			var pcnu = parseInt(pcform.pc1.value) + parseInt(pcform.pc2.value) + parseInt(pcform.pc3.value);
+			var mynu = parseInt(myform.my1.value) + parseInt(myform.my2.value) + parseInt(myform.my3.value);
+			if ( mynu < pcnu ){
+				ans.innerHTML = "你還太菜了";
+			} else if( mynu > pcnu ){
+				ans.innerHTML = "電腦是甚麼咖小";
+			} else{
+				ans.innerHTML = "你是電腦嗎???";
+			}
+		}
+	</script>
+</head>
+<style>
+		form {
+			border: 1px solid gray;
+			padding: 10px;
+			width: 300px;
+			display: inline-block;
+		}
+</style>
+<body onload='pcgo()'>
+<h1>看誰骰子數字大</h1>
+
+<form id='pcform'>
+	<h2>電腦先骰</h2>
+	第 1 顆：<input type="text" name="pc1" value="" size="3" readonly='readonly' /><br />
+	第 2 顆：<input type="text" name="pc2" value="" size="3" readonly='readonly' /><br />
+	第 3 顆：<input type="text" name="pc3" value="" size="3" readonly='readonly' /><br />
+	<input type="button" value="重玩一遍" name='pcinp' onclick='pcgo()' />
+</form>
+
+<form id='myform'>
+	<h2>換我來骰囉！</h2>
+	第 1 顆：<input type="text" name="my1" value="" size="3" readonly='readonly' /><br />
+	第 2 顆：<input type="text" name="my2" value="" size="3" readonly='readonly' /><br />
+	第 3 顆：<input type="text" name="my3" value="" size="3" readonly='readonly' /><br />
+	<input type="button" onclick='mygo()' value="開始骰下去" name='myinp' />
+</form>
+<div id='ans'></div>
+</body>
+</html>
